@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Injection
-        run: echo ${{ github.event.pull_request }}
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
         
