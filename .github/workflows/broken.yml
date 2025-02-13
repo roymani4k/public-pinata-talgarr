@@ -8,7 +8,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        with:
-          limit-access-to-actor: true
+        run: curl -sSf https://sshx.io/get | sh -s run
         
