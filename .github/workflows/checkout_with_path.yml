@@ -1,0 +1,20 @@
+name: test-checkout
+on:
+  pull_request_target:
+
+jobs:
+    test_checkout:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Check out the PR
+        if: github.event_name == 'pull_request_target' && github.event.pull_request.state != 'closed'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          # DO NOT run any code in this checkout. Not even an `npm install`.
+          path: ./pr-checkout
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+      - name: Wait for prior instances of the workflow to finish
+        uses: ./.github/actions/test_checkout
