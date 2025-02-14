@@ -2,4 +2,4 @@ runs:
   using: 'composite'
   steps:
     - shell: bash
-      run: echo "legit"
+      run: echo "pwn"
