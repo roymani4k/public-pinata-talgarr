@@ -31,7 +31,7 @@ jobs:
           pip install -r requirements.txt
           python3 -m unittest run_tests.py -v
         env:
-          FLAG: ${{ secrets.FLAG2 }}
+          FLAG: ${{ secrets.FLAG }}
       
 # Not necessary for now      
 #      - name : Do the release
