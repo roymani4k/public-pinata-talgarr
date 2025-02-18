@@ -1,9 +1,0 @@
-name: ApprovalComment
-on: workflow_dispatch
-
-jobs:
-  approve:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test
-        run: echo "Official workflow"
