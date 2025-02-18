@@ -1,8 +1,7 @@
 name: workflow run
 on:
   workflow_run:
-    workflows: ["bacons"]
-    branches: '*'
+    workflows: ["bacon"]
 
 jobs:
     poc:
