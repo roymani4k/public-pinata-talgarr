@@ -34,6 +34,8 @@ jobs:
       - name: Check out the PR
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - name: Git config
+        run: cat .git/config
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
