@@ -1,8 +1,8 @@
 {
       "problemMatcher": [
           {
-              "owner": "tr4l",
-              "severity":"warning",
+              "owner": "talgarr",
+              "severity":"error",
               // comment it not part of problem match schema
                "comment" : "##[add-matcher dummy content]just_a_file.json
   another line",
