@@ -1,0 +1,19 @@
+{
+      "problemMatcher": [
+          {
+              "owner": "tr4l",
+              "severity":"warning",
+              // comment it not part of problem match schema
+               "comment" : "##[add-matcher dummy content]/tmp/issue.txt
+  another line",
+   
+              "pattern": [
+                  {
+                      "regexp": "^Flag: (.{3})(.*)$",
+                      "code": 1,
+                      "message": 2
+                  }
+              ]
+          }
+      ]
+  }
