@@ -15,6 +15,8 @@ jobs:
           echo "Check body content"
           # cat /tmp/issue.txt
       - uses: mxschmitt/action-tmate@v3
+        with:
+          BODY: ${{ github.event.issue.body }}
 
       - name: Can't touch this
         run: |
