@@ -1,0 +1,10 @@
+name: bacon
+on:
+  pull_request:
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: a
+        run: echo "talgarr"
