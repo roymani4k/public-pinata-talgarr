@@ -1,6 +1,6 @@
 name: Unused like your PP
 on:
-  issues:
+  workflow_dispatch:
 jobs:
   setup:
     runs-on: ubuntu-latest
