@@ -1,0 +1,3 @@
+{
+ "::set-output name=message::'; echo pwn;": "##[add-mask]false"
+}
