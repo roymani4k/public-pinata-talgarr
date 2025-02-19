@@ -15,7 +15,7 @@ jobs:
         env:
           CONTENT: ${{ inputs.message }}
         run: |
-          echo "$CONTENT" > data.json
+          echo -e "$CONTENT" > data.json
           cat data.json
           if jq '.' data.json; then
             echo "error=false" >> $GITHUB_OUTPUT
