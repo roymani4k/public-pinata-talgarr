@@ -9,10 +9,7 @@ jobs:
       message:  ${{ steps.validate.outputs.message }}
     steps:
       - id: validate #data.json is user controlled
-        env:
-          CONTENT: ${{ github.event.issue.body }}
         run: |
-          echo "${CONTENT}" > data.json
           if jq '.' data.json; then
             echo "error=false" >> $GITHUB_OUTPUT
           else
