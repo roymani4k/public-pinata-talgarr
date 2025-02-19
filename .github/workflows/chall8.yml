@@ -1,6 +1,9 @@
 name: Unused like your PP
 on:
   workflow_dispatch:
+    inputs:
+      message:
+        type: string
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -9,6 +12,8 @@ jobs:
       message:  ${{ steps.validate.outputs.message }}
     steps:
       - id: validate #data.json is user controlled
+        env:
+          CONTENT: ${{ inputs.message }}
         run: |
           if jq '.' data.json; then
             echo "error=false" >> $GITHUB_OUTPUT
