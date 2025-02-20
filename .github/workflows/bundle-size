@@ -1,0 +1,16 @@
+name: Bundle size
+
+on:
+  pull_request:
+  
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/upload-artifact@v4
+        with:
+          path: uploads/
